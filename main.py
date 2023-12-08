@@ -9,4 +9,4 @@ for i in range(len(datos_importados)):
 
 with open('datos.json','r') as file:
     datos = json.load(file)
-print(json.dumps(datos, indent=4))
+# print(json.dumps(datos, indent=4))
