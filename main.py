@@ -1,13 +1,12 @@
-# import api
+import json
+import generador as ge
+
+datos_importados = ge.datos_generados
+
+for i in range(len(datos_importados)):
+    print(datos_importados[i])
 
 
-# print(api.datos[0]['IUS'])
-
-# for i in range(len(api.datos)):
-#     for k in range(len(api.datos)):
-#         print(api.datos[i])
-
-
-from faker import Faker
-fake = Faker()
-print(fake.name())
+with open('datos.json','r') as file:
+    datos = json.load(file)
+print(json.dumps(datos, indent=4))
